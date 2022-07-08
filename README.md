@@ -2,9 +2,9 @@
 Extract the description of a particular language from jsdoc written in multiple languages.
 
 
-[jsdoc example]
+- jsdoc example
 
-sourceDir/doc.js
+> sourceDir/doc.js
 ```js
 /**
  * $i18n{ko:숫자를 반환한다.,en:return the number.}
@@ -16,14 +16,18 @@ sourceDir/doc.js
 }
 ```
 
-[execution]
+
+
+- execution
+
 `node exportLang.js -l en`
 `node exportLang.js -l ko`
 
 
-[result]
 
-destDir/en/doc.js
+- result
+> destDir/ko/doc.js
+    
 ```js
 /**
  * 숫자를 반환한다.
@@ -34,7 +38,8 @@ destDir/en/doc.js
     return a;
 }
 ```
-destDir/ko/doc.js
+> destDir/en/docs.js
+    
 ```js
 /**
  * return the number.
