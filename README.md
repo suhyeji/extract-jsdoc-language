@@ -2,7 +2,7 @@
 Extract the description of a particular language from jsdoc written in multiple languages.
 
 
-jsdoc example
+[jsdoc example]
 
 sourceDir/doc.js
 ```js
@@ -16,10 +16,12 @@ sourceDir/doc.js
 }
 ```
 
-execution
+[execution]
 `node exportLang.js -l ko`
 
-=> destDir/en/doc.js
+
+[result]
+destDir/en/doc.js
 ```js
 /**
  * return number. number error
