@@ -1,5 +1,28 @@
 # extract-jsdoc-language
-여러 언어로 작성된 jsdoc에서 특정 언어의 설명만 뽑아낸다.
+Extract the description of a particular language from jsdoc written in multiple languages.
 
-실행방법
-`node exportLang.js -l <language>`
+
+jsdoc example
+
+sourceDir/doc.js
+/**
+ * $i18n{ko:숫자를 반환한다.문자는 반환오류가 됨.,en:return number. number error}
+ * @param {number} a - $i18n{ko:숫자,en:Number}
+ * @returns {number}
+ */
+ function num(a) {
+    return a;
+}
+
+execution
+`node exportLang.js -l ko`
+
+=> destDir/en/doc.js
+/**
+ * return number. number error
+ * @param {number} a - Number
+ * @returns {number}
+ */
+ function num(a) {
+    return a;
+}
