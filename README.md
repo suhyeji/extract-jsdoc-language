@@ -7,8 +7,8 @@ Extract the description of a particular language from jsdoc written in multiple 
 sourceDir/doc.js
 ```js
 /**
- * $i18n{ko:숫자를 반환한다.문자는 반환오류가 됨.,en:return number. number error}
- * @param {number} a - $i18n{ko:숫자,en:Number}
+ * $i18n{ko:숫자를 반환한다.,en:return the number.}
+ * @param {number} a - $i18n{ko:숫자,en:A number}
  * @returns {number}
  */
  function num(a) {
@@ -17,6 +17,7 @@ sourceDir/doc.js
 ```
 
 [execution]
+`node exportLang.js -l en`
 `node exportLang.js -l ko`
 
 
@@ -25,8 +26,19 @@ sourceDir/doc.js
 destDir/en/doc.js
 ```js
 /**
- * return number. number error
- * @param {number} a - Number
+ * 숫자를 반환한다.
+ * @param {number} a - 숫자
+ * @returns {number}
+ */
+ function num(a) {
+    return a;
+}
+```
+destDir/ko/doc.js
+```js
+/**
+ * return the number.
+ * @param {number} a - A number
  * @returns {number}
  */
  function num(a) {
