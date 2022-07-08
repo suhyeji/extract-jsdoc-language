@@ -21,6 +21,7 @@ sourceDir/doc.js
 
 
 [result]
+
 destDir/en/doc.js
 ```js
 /**
