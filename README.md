@@ -38,7 +38,7 @@ Extract the description of a particular language from jsdoc written in multiple 
     return a;
 }
 ```
-> localDocs/en/docs.js
+> localDocs/en/doc.js
     
 ```js
 /**
