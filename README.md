@@ -20,13 +20,13 @@ Extract the description of a particular language from jsdoc written in multiple 
 
 - execution
 
-`node exportLang.js -l en`
-`node exportLang.js -l ko`
+`node exportLang.js -src sourceDir -l en`
+`node exportLang.js -src sourceDir -l ko`
 
 
 
 - result
-> destDir/ko/doc.js
+> localDocs/ko/doc.js
     
 ```js
 /**
@@ -38,7 +38,7 @@ Extract the description of a particular language from jsdoc written in multiple 
     return a;
 }
 ```
-> destDir/en/docs.js
+> localDocs/en/docs.js
     
 ```js
 /**
